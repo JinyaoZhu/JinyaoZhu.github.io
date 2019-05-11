@@ -1,7 +1,7 @@
 ---
-author: kresnikwang
+author: Jinyao Zhu
 comments: true
-layout: blog
+layout: post
 title: First Blog
 categories:
   - Works
