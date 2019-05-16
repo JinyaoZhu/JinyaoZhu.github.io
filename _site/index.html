@@ -91,108 +91,55 @@
 				
 				<h2>
 					<img class="title-image" src="/img/dna.png" />
-					<a class="post-link" href="/technology/2016/02/11/eleventh.html">Eleventh post</a>
+					<a class="post-link" href="/linux/2019/05/16/vnc.html">Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)</a>
 				</h2>
 				<div class="author" style="margin-top: -10px;">Posted by
-					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Airraya Group</a>
-					<span class="post-meta"><i class="fa fa-calendar"></i> Feb 11, 2016</span>
+					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Jinyao Zhu</a>
+					<span class="post-meta"><i class="fa fa-calendar"></i> May 16, 2019</span>
 				</div>
-				<div class="excerpt"><p><img src="https://placehold.it/250x150" alt="picture" />
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices porta ultrices. Nulla gravida commodo aliquet. Quisque tincidunt enim quis odio vestibulum, et luctus ipsum lacinia. Cras malesuada sit amet erat vitae porttitor. Duis vitae mollis eros. Vestibulum eget tortor sodales, ullamcorper odio ac, tincidunt felis. Nunc interdum, mauris vitae ornare bibendum, risus libero aliquam ex, cursus feugiat mi libero in nulla. Nullam vel pulvinar ante. Vivamus vitae est aliquet, porttitor eros ut, facilisis erat. Sed malesuada nibh odio, at egestas libero commodo vitae. Integer laoreet lorem ac iaculis fermentum.
-Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer velit nunc, facilisis vel nisi in, semper pretium lorem.</p>
+				<div class="excerpt"><h2 id="introduction">Introduction</h2>
+<p><strong>V</strong>irtual <strong>N</strong>etwork <strong>C</strong>omputing is a connection system that allows you to use your keyboard and mouse to interact with a graphical desktop environment on a remote server. This articles describe how to install and setup the VNC server on Ubuntu 18.04 on the <a href="https://developer.nvidia.com/embedded/buy/jetson-nano-devkit">Jetson Nano</a> platform, using <a href="https://www.xfce.org/">Xfce</a> as the desktop environment.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Install xfce4:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install xfce4 xfce4-goodies
+</code></pre></div></div>
+<p>Install TightVNC server:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install tightvncserver
+</code></pre></div></div>
+<p>Run VNC server once to create a configuration file (automatically) and setup the password:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vncserver
+</code></pre></div></div>
+<p>PS: the configuration file is located in <code class="highlighter-rouge">home/user_name/.vnc/xstartup</code>.</p>
+
+<p>Kill the VNC server:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vncserver -kill :1
+</code></pre></div></div>
+
+<p>Edit the configuration file (<code class="highlighter-rouge">home/user_name/.vnc/xstartup</code>):</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">unset </span>SESSION_MANAGER
+<span class="nb">unset </span>DBUS_SESSION_BUS_ADDRESS
+xrdb <span class="nv">$HOME</span>/.Xresources
+startxfce4 &amp;
+</code></pre></div></div>
+<p>Restart VNC server:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vncserver :1 -geometry 1280x720
+</code></pre></div></div>
+<p>You can now connect to the VNC server from other computer with the server address (e.g. 198.168.31.118:1). To check the IP of your VNC server, click the ‘‘Connection Information’’ on the network icon at the upper right corner of the screen.</p>
+<div style="text-align: center">
+&lt;img src='/assets/images/2019-05-16/ip1.PNG' height=250 /&gt;  &lt;img src='/assets/images/2019-05-16/ip2.PNG' height=250/&gt;
+</div>
+
+<h2 id="running-vnc-as-a-system-server">Running VNC as a system server</h2>
+
+<h2 id="reference">Reference</h2>
+<p>[1] https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04.</p>
 
 </div>
 				<div class="readmore" style="float: left;">
 					
-					<a href="/technology/2016/02/11/eleventh.html">Read more</a>
-					
-				</div>
-			</div>
-			<hr>
-			<div class="post-list" style="list-style-type: none;">
-				
-				<h2>
-					<img class="title-image" src="/img/dna.png" />
-					<a class="post-link" href="/technology/2016/02/09/tenth.html">Tenth post</a>
-				</h2>
-				<div class="author" style="margin-top: -10px;">Posted by
-					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Airraya Group</a>
-					<span class="post-meta"><i class="fa fa-calendar"></i> Feb 9, 2016</span>
-				</div>
-				<div class="excerpt"><p><img src="https://placehold.it/250x150" alt="picture" />
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices porta ultrices. Nulla gravida commodo aliquet. Quisque tincidunt enim quis odio vestibulum, et luctus ipsum lacinia. Cras malesuada sit amet erat vitae porttitor. Duis vitae mollis eros. Vestibulum eget tortor sodales, ullamcorper odio ac, tincidunt felis. Nunc interdum, mauris vitae ornare bibendum, risus libero aliquam ex, cursus feugiat mi libero in nulla. Nullam vel pulvinar ante. Vivamus vitae est aliquet, porttitor eros ut, facilisis erat. Sed malesuada nibh odio, at egestas libero commodo vitae. Integer laoreet lorem ac iaculis fermentum.
-Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer velit nunc, facilisis vel nisi in, semper pretium lorem.</p>
-
-</div>
-				<div class="readmore" style="float: left;">
-					
-					<a href="/technology/2016/02/09/tenth.html">Read more</a>
-					
-				</div>
-			</div>
-			<hr>
-			<div class="post-list" style="list-style-type: none;">
-				
-				<h2>
-					<img class="title-image" src="/img/dna.png" />
-					<a class="post-link" href="/technology/2016/02/09/nineth.html">nineth post</a>
-				</h2>
-				<div class="author" style="margin-top: -10px;">Posted by
-					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Airraya Group</a>
-					<span class="post-meta"><i class="fa fa-calendar"></i> Feb 9, 2016</span>
-				</div>
-				<div class="excerpt"><p><img src="https://placehold.it/250x150" alt="picture" />
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices porta ultrices. Nulla gravida commodo aliquet. Quisque tincidunt enim quis odio vestibulum, et luctus ipsum lacinia. Cras malesuada sit amet erat vitae porttitor. Duis vitae mollis eros. Vestibulum eget tortor sodales, ullamcorper odio ac, tincidunt felis. Nunc interdum, mauris vitae ornare bibendum, risus libero aliquam ex, cursus feugiat mi libero in nulla. Nullam vel pulvinar ante. Vivamus vitae est aliquet, porttitor eros ut, facilisis erat. Sed malesuada nibh odio, at egestas libero commodo vitae. Integer laoreet lorem ac iaculis fermentum.
-Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer velit nunc, facilisis vel nisi in, semper pretium lorem.</p>
-
-</div>
-				<div class="readmore" style="float: left;">
-					
-					<a href="/technology/2016/02/09/nineth.html">Read more</a>
-					
-				</div>
-			</div>
-			<hr>
-			<div class="post-list" style="list-style-type: none;">
-				
-				<h2>
-					<img class="title-image" src="/img/dna.png" />
-					<a class="post-link" href="/eight-post">Eight post</a>
-				</h2>
-				<div class="author" style="margin-top: -10px;">Posted by
-					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Airraya Group</a>
-					<span class="post-meta"><i class="fa fa-calendar"></i> Feb 8, 2016</span>
-				</div>
-				<div class="excerpt"><p><img src="https://placehold.it/250x150" alt="picture" />
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices porta ultrices. Nulla gravida commodo aliquet. Quisque tincidunt enim quis odio vestibulum, et luctus ipsum lacinia. Cras malesuada sit amet erat vitae porttitor. Duis vitae mollis eros. Vestibulum eget tortor sodales, ullamcorper odio ac, tincidunt felis. Nunc interdum, mauris vitae ornare bibendum, risus libero aliquam ex, cursus feugiat mi libero in nulla. Nullam vel pulvinar ante. Vivamus vitae est aliquet, porttitor eros ut, facilisis erat. Sed malesuada nibh odio, at egestas libero commodo vitae. Integer laoreet lorem ac iaculis fermentum.
-Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer velit nunc, facilisis vel nisi in, semper pretium lorem.</p>
-
-</div>
-				<div class="readmore" style="float: left;">
-					
-					<a href="/eight-post">Read more</a>
-					
-				</div>
-			</div>
-			<hr>
-			<div class="post-list" style="list-style-type: none;">
-				
-				<h2>
-					<img class="title-image" src="/img/dna.png" />
-					<a class="post-link" href="/technology/2016/02/07/seventh.html">Seventh post</a>
-				</h2>
-				<div class="author" style="margin-top: -10px;">Posted by
-					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Airraya Group</a>
-					<span class="post-meta"><i class="fa fa-calendar"></i> Feb 7, 2016</span>
-				</div>
-				<div class="excerpt"><p><img src="https://placehold.it/250x150" alt="picture" />
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices porta ultrices. Nulla gravida commodo aliquet. Quisque tincidunt enim quis odio vestibulum, et luctus ipsum lacinia. Cras malesuada sit amet erat vitae porttitor. Duis vitae mollis eros. Vestibulum eget tortor sodales, ullamcorper odio ac, tincidunt felis. Nunc interdum, mauris vitae ornare bibendum, risus libero aliquam ex, cursus feugiat mi libero in nulla. Nullam vel pulvinar ante. Vivamus vitae est aliquet, porttitor eros ut, facilisis erat. Sed malesuada nibh odio, at egestas libero commodo vitae. Integer laoreet lorem ac iaculis fermentum.
-Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer velit nunc, facilisis vel nisi in, semper pretium lorem.</p>
-
-</div>
-				<div class="readmore" style="float: left;">
-					
-					<a href="/technology/2016/02/07/seventh.html">Read more</a>
+					<a href="/linux/2019/05/16/vnc.html">Read more</a>
 					
 				</div>
 			</div>
@@ -221,17 +168,7 @@ Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer 
 					
 
 					
-					<li><a href="/page2">2</a></li>
-					
-					
-
-					
-					<li><a href="/page3">3</a></li>
-					
-					
-
-					
-					<li><a href="/page2">Next</a></li>
+					<li><span class="disabled">Next</span></li>
 					
 				</ul>
 			</div>
@@ -265,80 +202,8 @@ Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer 
 						
 						
 						
-						<a class="bold" href="/category/computer-vision">
-							computer-vision (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/technology">
-							technology (7)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/computer">
-							computer (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/news">
-							news (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/science">
-							science (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/jekyll">
-							jekyll (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/education">
-							education (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/writing">
-							writing (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/random-topic">
-							Random Topic (1)
+						<a class="bold" href="/category/linux">
+							linux (1)
 						</a>
 					</div>
 					<div class="col-lg-6">
@@ -355,33 +220,9 @@ Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer 
 				<ul class="posts" span="recent">
 					
 					<li>
-						<span>11 Feb 2016</span>
-						<a href="/technology/2016/02/11/eleventh.html">
-							Eleventh post</a>
-					</li>
-					
-					<li>
-						<span>09 Feb 2016</span>
-						<a href="/technology/2016/02/09/tenth.html">
-							Tenth post</a>
-					</li>
-					
-					<li>
-						<span>09 Feb 2016</span>
-						<a href="/technology/2016/02/09/nineth.html">
-							nineth post</a>
-					</li>
-					
-					<li>
-						<span>08 Feb 2016</span>
-						<a href="/eight-post">
-							Eight post</a>
-					</li>
-					
-					<li>
-						<span>07 Feb 2016</span>
-						<a href="/technology/2016/02/07/seventh.html">
-							Seventh post</a>
+						<span>16 May 2019</span>
+						<a href="/linux/2019/05/16/vnc.html">
+							Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)</a>
 					</li>
 					
 				</ul>
@@ -394,50 +235,15 @@ Praesent sodales viverra purus non semper. Maecenas eu convallis neque. Integer 
 					
 					
 					
-					<a class="tag-label bold" href="/tag/multiview-geometry">
-						multiview-geometry (1)
+					<a class="tag-label bold" href="/tag/vnc">
+						vnc (1)
 					</a>
 					
 					
 					
 					
-					<a class="tag-label bold" href="/tag/holiday">
-						holiday (2)
-					</a>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/css">
-						css (4)
-					</a>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/jekyll">
-						jekyll (3)
-					</a>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/octopress">
-						octopress (1)
-					</a>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/html">
-						html (3)
-					</a>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/journey">
-						journey (1)
+					<a class="tag-label bold" href="/tag/jetson-nano">
+						jetson-nano (1)
 					</a>
 					
 				</ul>

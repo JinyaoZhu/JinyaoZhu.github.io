@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)"
+date:   2019-05-16
+category: linux
+tags: [vnc, jetson-nano]
+
+author: Jinyao Zhu
+---
+## Introduction
+**V**irtual **N**etwork **C**omputing is a connection system that allows you to use your keyboard and mouse to interact with a graphical desktop environment on a remote server. This articles describe how to install and setup the VNC server on Ubuntu 18.04 on the [Jetson Nano](https://developer.nvidia.com/embedded/buy/jetson-nano-devkit) platform, using [Xfce](https://www.xfce.org/) as the desktop environment.
+
+## Prerequisites
+Install xfce4:
+```
+sudo apt install xfce4 xfce4-goodies
+```
+Install TightVNC server:
+```
+sudo apt install tightvncserver
+```
+Run VNC server once to create a configuration file (automatically) and setup the password:
+```
+vncserver
+```
+PS: the configuration file is located in ```home/user_name/.vnc/xstartup```.  
+
+Kill the VNC server:
+```
+vncserver -kill :1
+```
+
+Edit the configuration file (```home/user_name/.vnc/xstartup```):
+```
+#!/bin/bash
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+xrdb $HOME/.Xresources
+startxfce4 &
+```
+Restart VNC server:
+```
+vncserver :1 -geometry 1280x720
+```
+You can now connect to the VNC server from other computer with the server address (e.g. 198.168.31.118:1). To check the IP of your VNC server, click the ''Connection Information'' on the network icon at the upper right corner of the screen.  
+<div style="text-align: center">
+<img src='{{site.baseurl}}/assets/images/2019-05-16/ip1.PNG' height=250 />  <img src='{{site.baseurl}}/assets/images/2019-05-16/ip2.PNG' height=250/>
+</div>
+
+## Running VNC as a system server
+
+
+
+## Reference
+[1] https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04.
+
+
+
