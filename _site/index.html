@@ -1,355 +1,308 @@
 <!DOCTYPE html>
 <html>
-
   <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Jinyao's Blog">
-    <meta name="author" content="Jinyao Zhu">
-    <link href='/img/favicon.ico' type='image/icon' rel='shortcut icon'/>
+        <link rel="shortcut icon" href="/static/img/favicon.ico" />
+        <title>Blog - Jinyao's 部落格</title>
+        <meta name="author" content="Jinyao" />
+        <meta name="description" content="Blog" />
+        <meta name="keywords" content="Blog, Jinyao's 部落格, " />
 
-    <title>Jinyao's Blog</title>
+        <meta content="0" property="fb:app_id">
+        <meta content="Jinyao's 部落格" property="og:site_name">
+        
+          <meta content="Blog" property="og:title">
+        
+        
+          <meta content="article" property="og:type">
+        
+        
+          <meta content="My Personal Blog" property="og:description">
+        
+        
+          <meta content="http://localhost:4000/" property="og:url">
+        
+        
+        
+          <meta content="http://localhost:4000/static/img/logo-high-resolution.png" property="og:image">
+        
+        
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@\#">
+        <meta name="twitter:creator" content="@\#">
+        
+          <meta name="twitter:title" content="Blog">
+        
+        
+          <meta name="twitter:url" content="http://localhost:4000/">
+        
+        
+          <meta name="twitter:description" content="My Personal Blog">
+        
+        
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="/css/simple-sidebar.css" rel="stylesheet">
-	<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    <!-- Custom CSS -->
-    <link href="/css/style.css" rel="stylesheet">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+      <script type="text/javascript">window.baseurl = 'http://localhost:4000';</script>
+      
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
-	
-	<!-- share this -->
-	<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "b28464c3-d287-4257-ad18-058346dd35f7", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <!-- FontAwesome icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/74dfc6cf47.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <!-- Core BootStrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Material Design CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
 
-</head>
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/static/css/syntax.css">
 
+        <!-- Custom CSS -->        
+        <link rel="stylesheet" href="/static/css/thickbox.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/projects.css">
 
-  <body>
-<div id="wrapper">
-    <!-- Navigation -->
+        <script type="text/javascript">
+          //loadingImage is relative to project dir
+          var tb_pathToImage = "/static/img/loadingAnimation.gif";
+        </script>
 
-    <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/">Blog</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
+  </head>
 
-
-    <header class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading text-left">
-                        <a href='/' style="color: #fff; font-size: 2.0em; font-family: Arial; text-decoration: none; font-weight: bold;">Jinyao's Blog</a>
-                        <a href="#menu-toggle" class="btn btn-default sciblog" id="menu-toggle" style="font-weight: normal;">&#9776; MENU</a>
-                    </div>
-                </div>
+  <body class="home overflow-hidden">
+    <div class="header-panel shadow-z-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="row-picture">
+              <img id="about" class="logo-img" src="/assets/icon.jpg" height="75px" width="75px">
             </div>
-        </div>
-    </header>
-
-	<!-- Page Content -->
-<div class="container">
-
-	<div class="row">
-
-		<!-- Blog Post Content Column -->
-		<div class="col-lg-8">
-			<!-- Blog Post -->
-			<div class="post-list" style="list-style-type: none;">
-				
-				<h2>
-					<img class="title-image" src="/img/dna.png" />
-					<a class="post-link" href="/linux/2019/05/16/vnc.html">Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)</a>
-				</h2>
-				<div class="author" style="margin-top: -10px;">Posted by
-					<i class="fa fa-user"></i><a href="http://www.airrayagroup.com/"> Jinyao Zhu</a>
-					<span class="post-meta"><i class="fa fa-calendar"></i> May 16, 2019</span>
-				</div>
-				<div class="excerpt"><h2 id="introduction">Introduction</h2>
-<p><strong>V</strong>irtual <strong>N</strong>etwork <strong>C</strong>omputing is a connection system that allows you to use your keyboard and mouse to interact with a graphical desktop environment on a remote server. This articles describe how to install and setup the VNC server on Ubuntu 18.04 on the <a href="https://developer.nvidia.com/embedded/buy/jetson-nano-devkit">Jetson Nano</a> platform, using <a href="https://www.xfce.org/">Xfce</a> as the desktop environment.</p>
-
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Install xfce4:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install xfce4 xfce4-goodies
-</code></pre></div></div>
-<p>Install TightVNC server:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install tightvncserver
-</code></pre></div></div>
-<p>Run VNC server once to create a configuration file (automatically) and setup the password:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vncserver
-</code></pre></div></div>
-<p>PS: the configuration file is located in <code class="highlighter-rouge">home/user_name/.vnc/xstartup</code>.</p>
-
-<p>Kill the VNC server:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vncserver -kill :1
-</code></pre></div></div>
-
-<p>Edit the configuration file (<code class="highlighter-rouge">home/user_name/.vnc/xstartup</code>):</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-<span class="nb">unset </span>SESSION_MANAGER
-<span class="nb">unset </span>DBUS_SESSION_BUS_ADDRESS
-xrdb <span class="nv">$HOME</span>/.Xresources
-startxfce4 &amp;
-</code></pre></div></div>
-<p>Restart VNC server:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vncserver :1 -geometry 1280x720
-</code></pre></div></div>
-<p>You can now connect to the VNC server from other computer with the server address (e.g. 198.168.31.118:1). To check the IP of your VNC server, click the ‘‘Connection Information’’ on the network icon at the upper right corner of the screen.</p>
-<div style="text-align: center">
-&lt;img src='/assets/images/2019-05-16/ip1.PNG' height=250 /&gt;  &lt;img src='/assets/images/2019-05-16/ip2.PNG' height=250/&gt;
+            <div class="row-details">
+              <h4 class="list-group-item-heading">Jinyao</h4>
+              <p class="list-group-item-text">Jinyao's 部落格</p>
+              <div class="social-icons">
+	
+        <a class="icon" target="_blank" href=""><i class="fa fa-facebook"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-linkedin"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-stack-exchange"></i></a>
+    
 </div>
 
-<h2 id="running-vnc-as-a-system-server">Running VNC as a system server</h2>
-
-<h2 id="reference">Reference</h2>
-<p>[1] https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04.</p>
-
-</div>
-				<div class="readmore" style="float: left;">
-					
-					<a href="/linux/2019/05/16/vnc.html">Read more</a>
-					
-				</div>
-			</div>
-			<hr>
-			<div class="post-list" style="list-style-type: none;">
-				
-			</div>
-			<!-- Pagination links -->
-			<span class='st_sharethis' displayText='ShareThis'></span>
-			<span class='st_facebook' displayText='Facebook'></span>
-			<span class='st_twitter' displayText='Tweet'></span>
-			<span class='st_linkedin' displayText='LinkedIn'></span>
-			<span class='st_pinterest' displayText='Pinterest'></span>
-			<span class='st_email' displayText='Email'></span>
-			<!-- Pagination links -->
-			<div class="pagination">
-				<ul>
-					
-					<li><span class="disabled">Previous</span></li>
-					
-
-					
-					<li><span class="active">1</span></li>
-					
-
-					
-
-					
-					<li><span class="disabled">Next</span></li>
-					
-				</ul>
-			</div>
-		</div>
-
-		<!-- Widget -->
-		<div class="col-md-4">
-
-			<!-- Blog Search -->
-			<div class="well">
-				<h4>Search</h4>
-				<div class="input-group">
-					<form action="https://www.google.com" id="cse-search-box">
-						<div>
-							<input type="hidden" name="cx" value="" />
-							<input type="hidden" name="ie" value="UTF-8" />
-							<input type="text" name="q" size="20" />
-							<input type="submit" name="sa" value="Search" />
-						</div>
-					</form>
-					<script type="text/javascript"
-						src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-				</div>
-			</div>
-			<!-- Blog Categories -->
-			<div class="well">
-				<h4>Blog Categories</h4>
-				<div class="row">
-					<div class="col-lg-6">
-						
-						
-						
-						
-						<a class="bold" href="/category/linux">
-							linux (1)
-						</a>
-					</div>
-					<div class="col-lg-6">
-						
-					</div>
-				</div>
-				<!-- /.row -->
-			</div>
-			<!-- end -->
-
-			<!-- Recents post -->
-			<div class="well">
-				<h4>Recent posts</h4>
-				<ul class="posts" span="recent">
-					
-					<li>
-						<span>16 May 2019</span>
-						<a href="/linux/2019/05/16/vnc.html">
-							Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)</a>
-					</li>
-					
-				</ul>
-			</div>
-			<!-- tags widget -->
-			<div class="well">
-				<h4>Tags</h4>
-				<ul>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/vnc">
-						vnc (1)
-					</a>
-					
-					
-					
-					
-					<a class="tag-label bold" href="/tag/jetson-nano">
-						jetson-nano (1)
-					</a>
-					
-				</ul>
-			</div>
-			<!-- author widget -->
-			<div class="well">
-        <h4>This blog is maintained by Jinyao Zhu.</h4>
-        <div class='text-center'>
-            <ul class="list-inline">
-                <li>
-                    <a href="https://jinyaozhu.github.io">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/JinyaoZhu">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-
-            </ul>
+            </div>
+            <div class="navbar-header pull-right">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-2x fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="row">
+            <h2 class="blog-title-pro col-md-6 col-sm-12 col-xs-12 ">Blog</h2>
+            
+            <div class="col-md-6 col-sm-12 col-xs-12 searchcontrol" id="js-search">
+              <input class="form-control" type="text" id="js-search__input" placeholder="Search">
+              <ul class="search__results" id="js-search__results"></ul>
+            </div>
+            
+            </div>
+            <p class="info">
+              
+              
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-			<!-- subscribe -->
-			<div class="well">
-				<!-- Begin MailChimp Signup Form -->
-				<div id="mc_embed_signup">
-					<form action="https://maplelearning.us1.list-manage.com/subscribe?u=47d56ac42a95b4295600c0e64&id=5f9ede27c9"
-						method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-						target="_blank" novalidate>
-						<div id="mc_embed_signup_scroll">
-							<h2>Subscribe to our mailing list</h2>
-							<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-							<div class="mc-field-group">
-								<label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-								</label>
-								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-							</div>
-							<div class="mc-field-group">
-								<label for="mce-FNAME">First Name </label>
-								<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-							</div>
-							<div class="mc-field-group">
-								<label for="mce-LNAME">Last Name </label>
-								<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-							</div>
-							<div id="mce-responses" class="clear">
-								<div class="response" id="mce-error-response" style="display:none"></div>
-								<div class="response" id="mce-success-response" style="display:none"></div>
-							</div>
-							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-									name="b_47d56ac42a95b4295600c0e64_5f9ede27c9" tabindex="-1" value=""></div>
-							<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-									class="button"></div>
-						</div>
-					</form>
-				</div>
 
-				<!--End mc_embed_signup-->
-			</div>
+    <div class="container main outer">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+              <nav class="menu">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="list-separator nav navbar-nav well well-primary default">
 
-		</div>
-	</div>
-	<!-- /.row -->
-	<hr>
-        <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>Copyright &copy; Jinyao Zhu<p>
-                </div>
-                <div class="col-lg-6">
-                    <p style="float: right;">Jekyll theme by AIR RAYA GROUP</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
 	
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12 current-menu-item "><a href="/" target="_self"><i class="fa fa-home"></i> Home</a></li>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="/about/" target="_self"><i class="fa fa-comments"></i> About</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="/projects" target="_self"><i class="fa fa-desktop"></i> Projects</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="/#" target="_self"><i class="fa fa-graduation-cap"></i> Resume</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="https://github.com/JinyaoZhu" target="_self"><i class="fa fa-github"></i> Github</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="/feed.xml" target="_blank"><i class="fa fa-feed"></i> XML Feed</a></li>
+
+</ul>
+
+    </div>
+    </nav>
+
+        </div>
+        <div class="col-md-9 col-xs-12 full">
+          <div class="well">
+    <div class="list-group">
+      
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <i class="fa fa-sticky-note"></i>
+        </div>
+        <div class="row-content">
+          <div class="least-content">16 May 2019</div>
+          <h4 class="list-group-item-heading"><a href="/linux/2019/05/16/vnc.html">Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)</a></h4>
+
+          <p class="list-group-item-text">Introduction Virtual Network Computing is a connection system that allows you to use your keyboard and mouse to interact with...</p>
+        </div>
+      </div>
+      <div class="list-group-separator"></div>
+      
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <i class="fa fa-sticky-note"></i>
+        </div>
+        <div class="row-content">
+          <div class="least-content">04 Jun 2016</div>
+          <h4 class="list-group-item-heading"><a href="/jekyll/2016/06/04/welcome-to-jekyll.html">Welcome to Jekyll!</a></h4>
+
+          <p class="list-group-item-text">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your...</p>
+        </div>
+      </div>
+      <div class="list-group-separator"></div>
+      
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <i class="fa fa-sticky-note"></i>
+        </div>
+        <div class="row-content">
+          <div class="least-content">04 Jun 2016</div>
+          <h4 class="list-group-item-heading"><a href="/others/2016/06/04/example-content.html">Example content for posts</a></h4>
+
+          <p class="list-group-item-text">This demo page has been used from http://jasonm23.github.io/markdown-css-themes/. A First Level Header A Second Level Header A Third Level Header...</p>
+        </div>
+      </div>
+      <div class="list-group-separator"></div>
+      
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <i class="fa fa-sticky-note"></i>
+        </div>
+        <div class="row-content">
+          <div class="least-content">04 Jun 2015</div>
+          <h4 class="list-group-item-heading"><a href="/others/2015/06/04/test-page.html">Test Page</a></h4>
+
+          <p class="list-group-item-text">This is a test blog page where we can explore how to embedd images in the blog. Image example 1...</p>
+        </div>
+      </div>
+      <div class="list-group-separator"></div>
+      
+    </div>
+   
+
+    <!-- Pagination links -->
+    
+</div><!-- end #home -->
+
+          <div class="row">
+            <div class="col-md-12 col-xs-12 footer">
+              <footer>
+  © 2016 Your Name <a href="#">Privacy link</a> - Powered by Jekyll.
+</footer>
+<div align="center">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-0000000000000000"
+    data-ad-slot="0000000000"
+    data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+
+            </div>
+          </div>
+        </div> <!-- end /.col-md-9 -->
+      </div> <!-- end /.row -->
+    </div>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="/static/js/super-search.js"></script>
+
+<script src="/static/js/thickbox-compressed.js"></script>
+<script src="/static/js/material.min.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/js/projects.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72862926-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>

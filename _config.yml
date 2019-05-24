@@ -1,25 +1,28 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: Jinyao's 部落格
+description: My Personal Blog
+author: Jinyao
+logo: /assets/icon.jpg
+github: https://github.com/JinyaoZhu
+about: Jinyao's 部落格
 
-# Site settings
-title: Jinyao's Blog
-email: jinyao.zhu@outlook.com
-description: > 
-  'Description'
-baseurl: '' # the subpath of your site, e.g. /blog
-url: "https://jinyaozhu.github.io" # the base hostname & protocol for your site
-author: Jinyao Zhu
+baseurl: ""
+url: ""
 
-# Gems
-gems: [jekyll-paginate]
+allowsearch: true
 
-# Build settings
+disqus_shortname: aboutashu
+google_analytics: UA-72862926-1
+
+share:
+  twitter_username: \#
+  fb_appid: 000000000000
+
+
+enableTags: true
+tagarray: []
+
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
 markdown: kramdown
-paginate: 5
-paginate_path: 'page:num/'
-comments: true
-excerpt_separator: <!-- more -->
+gems: [jekyll-paginate, jekyll-gist]
