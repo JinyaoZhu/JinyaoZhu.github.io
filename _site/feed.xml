@@ -5,9 +5,61 @@
     <description>My Personal Blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 May 2019 00:48:55 +0200</pubDate>
-    <lastBuildDate>Sat, 25 May 2019 00:48:55 +0200</lastBuildDate>
+    <pubDate>Sun, 02 Jun 2019 19:52:31 +0200</pubDate>
+    <lastBuildDate>Sun, 02 Jun 2019 19:52:31 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Install jekyll on Windows 10 and Linux Ubuntu</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This post introduces how to install &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; on Windows 10 and Linux Ubuntu environment for writing blog using jekyll.&lt;/p&gt;
+
+&lt;h2 id=&quot;windows-10&quot;&gt;Windows 10&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-installation-via-rubyinstaller&quot;&gt;1. Installation via RubyInstaller&lt;/h3&gt;
+&lt;p&gt;Download the latest version &lt;a href=&quot;https://rubyinstaller.org/downloads/&quot;&gt;Ruby+Devkit&lt;/a&gt;, use default option during installation. Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Run &quot;ridk install&quot; to setp up ...&lt;/code&gt; on the last step of the installation wizard.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-06-02/1.PNG&quot; alt=&quot;&quot; style=&quot;float:left; margin-right:10px; margin-bottom:10px; height:300px;&quot; /&gt;
+&lt;br clear=&quot;all&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-install-msys2-and-mingw-development-toolchain&quot;&gt;2. Install MSYS2 and MINGW development toolchain&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2019-06-02/2.PNG&quot; alt=&quot;&quot; style=&quot;float:left; margin-right:10px; margin-bottom:10px; height:300px;&quot; /&gt;
+&lt;br clear=&quot;all&quot; /&gt;
+Press 3 and Enter.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-install-jekyll-and-bundler&quot;&gt;3. Install Jekyll and Bundler&lt;/h3&gt;
+&lt;p&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Start Command Prompt with Ruby&lt;/code&gt; from the Start Menu. Input the command:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Check jekyll version:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll -v
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;4-start-local-host-with-jekyll&quot;&gt;4. Start Local Host with Jekyll&lt;/h3&gt;
+&lt;p&gt;In your command prompt:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd PATH_TO_YOUR_REPOSITORY
+jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Get errors during startup?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Manually install the required packages mentioned in the error prompt.&lt;/li&gt;
+  &lt;li&gt;Try &lt;code class=&quot;highlighter-rouge&quot;&gt;gem cleanup&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;linux-ubuntu-1604&quot;&gt;Linux Ubuntu 16.04&lt;/h2&gt;
+&lt;p&gt;continue…&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[1] https://jekyllrb.com/docs/installation/windows/.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 02 Jun 2019 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/web/2019/06/02/jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2019/06/02/jekyll.html</guid>
+        
+        
+        <category>web</category>
+        
+      </item>
     
       <item>
         <title>Install and Configure VNC server on Ubuntu 18.04 (Jetson Nano)</title>

@@ -1,0 +1,49 @@
+---
+layout: post
+title:  "Install jekyll on Windows 10 and Linux Ubuntu"
+date:   2019-06-02
+category: web
+---
+## Introduction
+This post introduces how to install [Jekyll](https://jekyllrb.com/) on Windows 10 and Linux Ubuntu environment for writing blog using jekyll.
+
+## Windows 10
+
+### 1. Installation via RubyInstaller
+Download the latest version [Ruby+Devkit](https://rubyinstaller.org/downloads/), use default option during installation. Click `Run "ridk install" to setp up ...` on the last step of the installation wizard.
+
+![](/assets/2019-06-02/1.PNG){:style="float:left; margin-right:10px; margin-bottom:10px; height:300px;"}
+<br clear="all" />
+
+### 2. Install MSYS2 and MINGW development toolchain
+![](/assets/2019-06-02/2.PNG){:style="float:left; margin-right:10px; margin-bottom:10px; height:300px;"}
+<br clear="all" />
+Press 3 and Enter.
+
+### 3. Install Jekyll and Bundler 
+Open `Start Command Prompt with Ruby` from the Start Menu. Input the command:
+```
+gem install jekyll bundler
+```
+Check jekyll version:
+```
+jekyll -v
+```
+### 4. Start Local Host with Jekyll
+In your command prompt:
+```
+cd PATH_TO_YOUR_REPOSITORY
+jekyll serve
+```
+Get errors during startup?
+- Manually install the required packages mentioned in the error prompt.
+- Try `gem cleanup`.
+
+## Linux Ubuntu 16.04
+continue...
+
+## Reference
+[1] https://jekyllrb.com/docs/installation/windows/.
+
+
+
