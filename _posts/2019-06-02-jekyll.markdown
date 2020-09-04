@@ -21,7 +21,7 @@ Download the latest version [Ruby+Devkit](https://rubyinstaller.org/downloads/),
 Press 3 and Enter.
 
 ### 3. Install Jekyll and Bundler 
-Open `Start Command Prompt with Ruby` from the Start Menu. Input the command:
+Open `Start Command Prompt with Ruby` from the Start Menu. Input following command:
 ```
 gem install jekyll bundler
 ```

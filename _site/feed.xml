@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jinyao's 部落格</title>
+    <title>Jinyao's blog</title>
     <description>My Personal Blog</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Jun 2019 19:52:31 +0200</pubDate>
-    <lastBuildDate>Sun, 02 Jun 2019 19:52:31 +0200</lastBuildDate>
+    <pubDate>Fri, 04 Sep 2020 18:15:43 +0200</pubDate>
+    <lastBuildDate>Fri, 04 Sep 2020 18:15:43 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>红楼梦人物关系 高清 大图</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/2020-09-04/relationship.jpg&quot; alt=&quot;&quot; style=&quot;float:left; margin-right:10px; margin-bottom:10px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020-09-04/relationship2.jpg&quot; alt=&quot;&quot; style=&quot;float:left; margin-right:10px; margin-bottom:10px;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/other/2020/09/04/dream_of_the_red_chamber.html</link>
+        <guid isPermaLink="true">http://localhost:4000/other/2020/09/04/dream_of_the_red_chamber.html</guid>
+        
+        
+        <category>other</category>
+        
+      </item>
     
       <item>
         <title>Install jekyll on Windows 10 and Linux Ubuntu</title>
@@ -28,7 +44,7 @@
 Press 3 and Enter.&lt;/p&gt;
 
 &lt;h3 id=&quot;3-install-jekyll-and-bundler&quot;&gt;3. Install Jekyll and Bundler&lt;/h3&gt;
-&lt;p&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Start Command Prompt with Ruby&lt;/code&gt; from the Start Menu. Input the command:&lt;/p&gt;
+&lt;p&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Start Command Prompt with Ruby&lt;/code&gt; from the Start Menu. Input following command:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Check jekyll version:&lt;/p&gt;
